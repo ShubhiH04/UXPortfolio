@@ -217,3 +217,84 @@ img:hover {
         transform: translateY(0);
     }
 }
+
+/* Projects Section Styling */
+.projects {
+    display: flex;
+    flex-wrap: wrap; /* Allows the cards to wrap into the next row */
+    justify-content: space-between; /* Space between the cards */
+    margin: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 50%; /* Each card takes up 48% of the container’s width */
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;
+    min-height: 300px; /* Ensures there's enough height for image and content */
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-right: 800px;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);  /* Hover effect for the cards */
+}
+
+.interpretaid-image {
+    max-height: 350px;
+    border-radius: 20px;
+    margin-left: 50%;
+    margin-top: -380px;
+}
+
+.interpretaid-image2 {
+    max-height: 350px;
+    border-radius: 20px;
+    margin-left: 65%;
+    margin-top: -380px;
+}
+
+.interpretaid-image3 {
+    max-height: 350px;
+    border-radius: 20px;
+    margin-left: 80%;
+    margin-top: -380px;
+}
+
+
+.marketmate-image {
+    max-height: 350px;
+    border-radius: 20px;
+    margin-left: 50%;
+    margin-top: -380px;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    color: #6A5ACD;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #4B0082;
+    font-size: 18px;
+    margin-bottom: 15px;
+    max-width: max-content;
+    padding: 10%;
+}
+
+.project-card a {
+    color: #4B0082;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
+}
+
+.project-card a:hover {
+    color: #6A5ACD;
+}
