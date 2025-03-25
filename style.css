@@ -271,7 +271,28 @@ img:hover {
     max-height: 350px;
     border-radius: 20px;
     margin-left: 50%;
-    margin-top: -380px;
+    margin-top: -400px;
+}
+
+.Revivo1-image {
+    max-height: 350px;
+    border-radius: 20px;
+    margin-left: 50%;
+    margin-top: -430px;
+}
+
+.Revivo2-image2 {
+    max-height: 350px;
+    border-radius: 20px;
+    margin-left: 65%;
+    margin-top: -430px;
+}
+
+.Revivo3-image3 {
+    max-height: 350px;
+    border-radius: 20px;
+    margin-left: 80%;
+    margin-top: -430px;
 }
 
 .project-card h3 {
