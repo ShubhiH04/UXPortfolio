@@ -231,7 +231,7 @@ img:hover {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 50%; /* Each card takes up 48% of the container’s width */
+    width: 50%; /* Each card takes up 50% of the container’s width */
     padding: 15px;
     transition: transform 0.3s ease-in-out;
     min-height: 300px; /* Ensures there's enough height for image and content */
@@ -289,6 +289,27 @@ img:hover {
 }
 
 .Revivo3-image3 {
+    max-height: 350px;
+    border-radius: 20px;
+    margin-left: 80%;
+    margin-top: -430px;
+}
+
+.WhenAI1-image {
+    max-height: 350px;
+    border-radius: 20px;
+    margin-left: 50%;
+    margin-top: -430px;
+}
+
+.WhenAI2-image2 {
+    max-height: 350px;
+    border-radius: 20px;
+    margin-left: 65%;
+    margin-top: -430px;
+}
+
+.WhenAI3-image3 {
     max-height: 350px;
     border-radius: 20px;
     margin-left: 80%;
