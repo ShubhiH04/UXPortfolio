@@ -130,12 +130,13 @@ body {
 .hero-content h1 {
     font-size: 3.5rem;
     font-weight: 800;
-    line-height: 1.1;
+    line-height: 1.2;
     margin-bottom: 1.5rem;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    padding-bottom: 0.1em;
 }
 
 .hero-content .subtitle {
