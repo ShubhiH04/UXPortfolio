@@ -378,6 +378,30 @@ main {
     margin-top: 0.4rem;
 }
 
+.project-impact {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+    padding: 0.6rem 0.8rem;
+    margin-top: 0.2rem;
+    border-radius: 999px;
+    background: rgba(248, 181, 212, 0.16);
+    border: 1px solid rgba(127, 161, 232, 0.18);
+    width: fit-content;
+}
+
+.project-impact__value {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.project-impact__label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
 .project-tags {
     display: flex;
     flex-wrap: wrap;
