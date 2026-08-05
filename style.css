@@ -237,6 +237,39 @@ main {
     margin-top: 1.25rem;
 }
 
+.filter-bar {
+    max-width: 1180px;
+    margin: 0 auto 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.filter-btn {
+    font-family: 'Poppins', sans-serif;
+    padding: 0.72rem 1rem;
+    border-radius: 999px;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn:focus-visible {
+    background: rgba(127, 161, 232, 0.08);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.filter-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
 .hero-highlights {
     display: grid;
     gap: 0.9rem;
@@ -352,7 +385,7 @@ main {
 
 .project-card {
     overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.3s ease;
 }
 
 .project-card:hover,
@@ -571,6 +604,15 @@ main {
 }
 
 @media (max-width: 640px) {
+    .filter-bar {
+        gap: 0.5rem;
+    }
+
+    .filter-btn {
+        flex: 1 1 auto;
+        min-width: 7rem;
+    }
+
     .nav-container {
         padding: 1rem;
     }

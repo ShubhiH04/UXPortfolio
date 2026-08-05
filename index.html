@@ -97,8 +97,18 @@
                 <p class="section-subtitle">Each project below opens into a dedicated page so the work is easier to explore and understand at a glance.</p>
             </div>
 
+            <div class="filter-bar" role="group" aria-label="Filter projects by category">
+                <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+                <button class="filter-btn" data-filter="healthcare" aria-pressed="false">Healthcare</button>
+                <button class="filter-btn" data-filter="mobile" aria-pressed="false">Mobile</button>
+                <button class="filter-btn" data-filter="web-app" aria-pressed="false">Web App</button>
+                <button class="filter-btn" data-filter="research" aria-pressed="false">Research</button>
+                <button class="filter-btn" data-filter="ai" aria-pressed="false">AI/ML</button>
+                <button class="filter-btn" data-filter="deployed" aria-pressed="false">Deployed</button>
+            </div>
+
             <div class="projects-grid">
-                <article class="project-card">
+                <article class="project-card" data-category="web-app deployed">
                     <img src="img/SpotifyMA1.png" alt="Spotify Music Analytics dashboard preview">
                     <div class="project-content">
                         <p class="project-category">Data visualization • Dashboard</p>
@@ -133,7 +143,7 @@
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card" data-category="web-app deployed">
                     <img src="img/marketmatess.png" alt="MarketMate app preview">
                     <div class="project-content">
                         <p class="project-category">Web app • Grocery planning</p>
@@ -168,7 +178,7 @@
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card" data-category="healthcare research">
                     <img src="img/Interpretaid1.png" alt="InterpretAid app preview">
                     <div class="project-content">
                         <p class="project-category">Accessibility • Healthcare</p>
@@ -193,7 +203,7 @@
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card" data-category="mobile ai">
                     <img src="img/Tailored1.png" alt="Tailored app interface preview">
                     <div class="project-content">
                         <p class="project-category">Mobile app • AI styling</p>
@@ -218,7 +228,7 @@
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card" data-category="mobile">
                     <img src="img/Revivo1.png" alt="Revivo app preview">
                     <div class="project-content">
                         <p class="project-category">Sustainability • Mobile design</p>
@@ -243,7 +253,7 @@
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card" data-category="research ai healthcare">
                     <img src="img/WhenAI1.png" alt="When AI Lies With Confidence project preview">
                     <div class="project-content">
                         <p class="project-category">Research • AI trust</p>
@@ -291,6 +301,45 @@
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
+            });
+        });
+
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card[data-category]');
+
+        const applyCardVisibility = (card, show) => {
+            if (show) {
+                card.style.display = '';
+                card.style.opacity = '0';
+                requestAnimationFrame(() => {
+                    card.style.opacity = '1';
+                });
+                return;
+            }
+
+            card.style.opacity = '0';
+            window.setTimeout(() => {
+                card.style.display = 'none';
+            }, 220);
+        };
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.setAttribute('aria-pressed', 'false');
+                });
+
+                button.classList.add('active');
+                button.setAttribute('aria-pressed', 'true');
+
+                const filter = button.dataset.filter;
+
+                projectCards.forEach(card => {
+                    const categories = card.dataset.category.split(' ');
+                    const show = filter === 'all' || categories.includes(filter);
+                    applyCardVisibility(card, show);
+                });
             });
         });
     </script>
