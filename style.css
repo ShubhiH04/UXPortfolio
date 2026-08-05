@@ -246,28 +246,33 @@ main {
 }
 
 .filter-btn {
+    appearance: none;
+    -webkit-appearance: none;
     font-family: 'Poppins', sans-serif;
     padding: 0.72rem 1rem;
     border-radius: 999px;
-    border: 2px solid var(--primary-color);
-    background: transparent;
+    border: 1.5px solid rgba(127, 161, 232, 0.75);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(247, 240, 255, 0.96));
     color: var(--primary-color);
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 18px rgba(170, 184, 245, 0.16);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .filter-btn:hover,
 .filter-btn:focus-visible {
-    background: rgba(127, 161, 232, 0.08);
+    background: linear-gradient(135deg, rgba(255, 245, 250, 0.98), rgba(233, 239, 255, 0.98));
+    border-color: var(--secondary-color);
+    color: var(--text-primary);
     transform: translateY(-1px);
     box-shadow: var(--shadow-md);
 }
 
 .filter-btn.active {
-    background: var(--primary-color);
-    color: white;
-    border-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--highlight-color) 0%, var(--accent-color) 55%, var(--secondary-color) 100%);
+    color: var(--text-primary);
+    border-color: transparent;
 }
 
 .hero-highlights {
