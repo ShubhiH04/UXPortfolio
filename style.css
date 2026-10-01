@@ -1,5 +1,6 @@
 :root {
     --primary-color: #7fa1e8;
+    --primary-text: #3b58a8; /* accessible blue for text (about 6:1 on white) */
     --secondary-color: #aab8f5;
     --accent-color: #f8b5d4;
     --highlight-color: #f3c2f2;
@@ -7,7 +8,7 @@
     --background: #fff8f8;
     --surface: #ffffff;
     --text-primary: #2a2e3c;
-    --text-secondary: #5c6270;
+    --text-secondary: #4a5060;
     --border: #e5e7eb;
     --gradient-primary: linear-gradient(135deg, #f8b5d4 0%, #aab8f5 50%, #7fa1e8 100%);
     --gradient-accent: linear-gradient(135deg, #f3c2f2 0%, #f8b5d4 50%, #9ec6f9 100%);
@@ -45,6 +46,12 @@ a {
 button,
 a {
     font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--primary-text);
+    outline-offset: 3px;
 }
 
 .skip-link {
@@ -106,7 +113,7 @@ a {
 
 .nav-link:hover,
 .nav-link:focus-visible {
-    color: var(--primary-color);
+    color: var(--primary-text);
 }
 
 .cta-button,
@@ -132,13 +139,13 @@ a {
 .cta-button,
 .btn-primary {
     background: var(--gradient-accent);
-    color: white;
+    color: var(--text-primary); /* was white, which failed contrast on the pastel gradient */
 }
 
 .btn-secondary {
     background: transparent;
-    color: var(--primary-color);
-    border-color: var(--primary-color);
+    color: var(--primary-text);
+    border-color: var(--primary-text);
 }
 
 .btn-secondary:hover,
@@ -204,7 +211,7 @@ main {
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--primary-color);
+    color: var(--primary-text);
 }
 
 .hero h1,
@@ -253,7 +260,7 @@ main {
     border-radius: 999px;
     border: 1.5px solid rgba(127, 161, 232, 0.75);
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(247, 240, 255, 0.96));
-    color: var(--primary-color);
+    color: var(--primary-text);
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0 6px 18px rgba(170, 184, 245, 0.16);
@@ -328,7 +335,7 @@ main {
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--primary-color);
+    color: var(--primary-text);
 }
 
 .section-header {
@@ -417,11 +424,16 @@ main {
 }
 
 .project-category {
-    color: var(--primary-color);
+    color: var(--primary-text);
     font-size: 0.82rem;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
+}
+
+.project-meta {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
 }
 
 .project-content h3 {
@@ -448,7 +460,7 @@ main {
     gap: 0.2rem;
     padding: 0.6rem 0.8rem;
     margin-top: 0.2rem;
-    border-radius: 999px;
+    border-radius: 18px;
     background: rgba(248, 181, 212, 0.16);
     border: 1px solid rgba(127, 161, 232, 0.18);
     width: fit-content;
@@ -478,6 +490,40 @@ main {
     background: rgba(243, 194, 242, 0.3);
     color: var(--text-primary);
     font-size: 0.8rem;
+}
+
+.more-work {
+    max-width: 1180px;
+    margin: 3rem auto 0;
+}
+
+.more-work h3 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.more-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.more-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 1.2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.more-card h4 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0.3rem;
+}
+
+.more-card p {
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
 }
 
 .contact {
@@ -538,6 +584,33 @@ main {
     box-shadow: var(--shadow-lg);
 }
 
+.meta-grid {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 1.5rem 1.4rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.meta-grid div {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 0.9rem 1rem;
+}
+
+.meta-grid dt {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-text);
+}
+
+.meta-grid dd {
+    color: var(--text-secondary);
+}
+
 .detail-section {
     max-width: 1180px;
     margin: 0 auto;
@@ -564,10 +637,28 @@ main {
     color: var(--text-secondary);
 }
 
+.detail-card p + p {
+    margin-top: 0.6rem;
+}
+
 .detail-card ul {
     padding-left: 1rem;
     display: grid;
     gap: 0.4rem;
+}
+
+.decision {
+    border-left: 4px solid var(--accent-color);
+    padding-left: 1rem;
+    margin-top: 0.8rem;
+}
+
+.decision strong {
+    color: var(--text-primary);
+}
+
+.method-note {
+    font-size: 0.9rem;
 }
 
 .detail-figure {
@@ -585,13 +676,18 @@ main {
     border-radius: 18px;
 }
 
-.detail-cta {
+.detail-cta,
+.next-project {
     max-width: 1180px;
     margin: 0 auto;
     padding: 1rem 1.5rem 4rem;
     display: flex;
     flex-wrap: wrap;
     gap: 0.8rem;
+}
+
+.next-project {
+    justify-content: space-between;
 }
 
 .detail-section__title {
@@ -602,7 +698,7 @@ main {
 
 .detail-section__intro {
     margin-bottom: 1rem;
-    opacity: 0.8;
+    color: var(--text-secondary);
 }
 
 .detail-embed {
@@ -625,7 +721,7 @@ main {
 }
 
 .detail-embed__link {
-    display: inline-block;
+    display: inline-flex;
 }
 
 .detail-gallery {
@@ -643,7 +739,14 @@ main {
 .detail-gallery__item figcaption {
     margin-top: 0.5rem;
     font-size: 0.9rem;
-    opacity: 0.8;
+    color: var(--text-secondary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 @media (max-width: 900px) {
@@ -653,6 +756,11 @@ main {
     .projects-grid,
     .experience-grid {
         grid-template-columns: 1fr;
+    }
+
+    .meta-grid,
+    .more-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
     .hero {
@@ -687,9 +795,16 @@ main {
 
     .detail-hero,
     .detail-section,
-    .detail-cta {
+    .detail-cta,
+    .next-project,
+    .meta-grid {
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+
+    .meta-grid,
+    .more-grid {
+        grid-template-columns: 1fr;
     }
 
     .hero-card img {
@@ -706,4 +821,51 @@ main {
     .project-links {
         flex-direction: column;
     }
+}
+
+/* Collapsible deep-dive sections */
+.deep-dive {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 1rem 1.4rem;
+    margin-bottom: 0.8rem;
+    box-shadow: var(--shadow-md);
+}
+
+.deep-dive summary {
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--primary-text);
+}
+
+.deep-dive[open] summary {
+    margin-bottom: 0.8rem;
+}
+
+.deep-dive p,
+.deep-dive li {
+    color: var(--text-secondary);
+}
+
+.deep-dive p + p,
+.deep-dive figure {
+    margin-top: 0.8rem;
+}
+
+.deep-dive img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.deep-dive ul {
+    padding-left: 1rem;
+}
+
+.glance-stat {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.3rem;
 }
