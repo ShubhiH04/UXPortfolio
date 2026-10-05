@@ -14,7 +14,7 @@
     <nav class="navbar" aria-label="Breadcrumb">
         <div class="nav-container">
             <a href="index.html" class="logo">SH</a>
-            <a href="./#projects" class="nav-link">Back to portfolio</a>
+            <a href="index.html#projects" class="nav-link">Back to portfolio</a>
         </div>
     </nav>
     <main>
@@ -25,8 +25,7 @@
                 <p class="detail-summary">Buying women's jeans is a guessing game that ends in self-doubt. FitList turns it into a shared, confidence-building experience.</p>
                 <div class="detail-tags"><span>Service design</span><span>Journey mapping</span><span>Behavioral psychology</span><span>AI prototyping</span></div>
                 <div class="hero-actions">
-                    <a class="btn btn-primary" href="https://preview--jean-style-journey.lovable.app/onboarding" target="_blank" rel="noopener noreferrer">Try the prototype!</a>
-                    <a class="btn btn-primary" href="https://www.youtube.com/watch?v=nLDyOHBm02g" target="_blank" rel="noopener noreferrer">Watch the project video!</a>
+                    <a class="btn btn-primary" href="https://preview--jean-style-journey.lovable.app/onboarding" target="_blank" rel="noopener noreferrer">Try the prototype (opens in new tab)</a>
                 </div>
             </div>
             <div class="detail-hero__media"><img src="img/FitList1.png" alt="FitList onboarding flow preview"></div>
@@ -40,18 +39,26 @@
         </dl>
 
         <section class="detail-section">
+            <h2 class="detail-section__title">Watch the project</h2>
+            <div class="detail-embed detail-embed--small">
+                <iframe src="https://www.youtube.com/embed/nLDyOHBm02g" title="FitList project video" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p class="method-note video-fallback"><a class="nav-link" href="https://www.youtube.com/watch?v=nLDyOHBm02g" target="_blank" rel="noopener noreferrer">Watch on YouTube (opens in new tab)</a></p>
+        </section>
+
+        <section class="detail-section">
             <div class="detail-grid">
                 <article class="detail-card">
                     <h2>The problem</h2>
-                    <p>Sizing has no standard, brands use vanity sizing, and fit models rarely reflect diverse bodies. Our journey map showed shoppers sliding from optimism to giving up.</p>
+                    <p>Sizing has no standard, brands use vanity sizing, and fit models rarely reflect diverse bodies. Shoppers slide from optimism to giving up.</p>
                 </article>
                 <article class="detail-card">
                     <h2>What I did</h2>
-                    <p>Led research and journey mapping, used behavioral psychology to set design goals, and prototyped a denim-identity quiz with a friends-based community. I specifically led the denim identity quiz development and lean canvas research.</p>
+                    <p>Led research and journey mapping, used behavioral psychology to set design goals, and led the denim identity quiz and lean canvas research.</p>
                 </article>
                 <article class="detail-card">
                     <h2>The result</h2>
-                    <p>Testers responded best to the quiz, the friends page, and the Pinterest-style board. They said they were unlikely to retake the quiz, which is our main open problem.</p>
+                    <p>Testers responded best to the quiz, the friends page, and the Pinterest-style board. They were unlikely to retake the quiz, our main open problem.</p>
                 </article>
                 <article class="detail-card">
                     <h2>Additional Thoughts</h2>
@@ -61,34 +68,62 @@
         </section>
 
         <section class="detail-section">
-            <h2 class="detail-section__title">From downhill to uphill</h2>
-            <p class="detail-section__intro">The line in each map is the shopper's mood over time. Today it trends down; with FitList it ends high.</p>
-            <div class="detail-gallery">
-                <figure class="detail-gallery__item"><img src="img/fitlist-slide7.png" alt="Current-state journey map with a mostly downward emotional line ending in giving up."><figcaption>Before: optimism, then frustration, then giving up.</figcaption></figure>
-                <figure class="detail-gallery__item"><img src="img/fitlist-slide13.png" alt="Future-state journey map with a much more positive emotional line ending in a purchase."><figcaption>After: guided in store, ending in jeans that fit.</figcaption></figure>
+            <h2 class="detail-section__title">Research: shopping for jeans breaks down at the first size</h2>
+            <article class="detail-card">
+                <h2>What we found</h2>
+                <ul>
+                    <li><strong>No standard to rely on.</strong> A size 4 in one store tells you nothing about the next, so past purchases are useless as a reference.</li>
+                    <li><strong>Vanity sizing.</strong> Brands label jeans with a smaller size to appeal to customers, which makes numbers even less trustworthy.</li>
+                    <li><strong>Fit models that don't reflect diverse bodies,</strong> so many shoppers are guessing from the start.</li>
+                    <li><strong>Returns add cost.</strong> Our persona, Tiffany, 29, loves trying new styles but hates traveling back to the mall to return jeans that didn't fit.</li>
+                    <li><strong>The emotional arc falls.</strong> Mapping her journey showed optimism at the rack turning into frustration and giving up.</li>
+                </ul>
+            </article>
+            <div class="detail-gallery" style="margin-top:1rem">
+                <figure class="detail-gallery__item"><img src="img/fitlist-slide6.jpg" alt="Problem storyboard: jeans that don't fit, a return, and giving up at a second store."><figcaption>Storyboard: a size 4 that fits at Store A fails at Store B, ending in a return and giving up.</figcaption></figure>
+                <figure class="detail-gallery__item"><img src="img/fitlist-slide11.png" alt="Persona card for Tiffany with goals and frustrations."><figcaption>Persona: Tiffany wants to explore new styles confidently and shop predictably.</figcaption></figure>
+                <figure class="detail-gallery__item"><img src="img/fitlist-slide7.png" alt="Current-state journey map with a mostly downward emotional line ending in giving up."><figcaption>Current journey map: the mood line trends down from optimism to giving up.</figcaption></figure>
             </div>
+            <!-- ADD if you have it: interview or survey findings, e.g. participant count and one key quote -->
         </section>
 
         <section class="detail-section">
             <article class="detail-card">
-                <h2>Three decisions that shaped it</h2>
+                <h2>Design decisions</h2>
                 <div class="decision">
-                    <p><strong>Design for how shopping is remembered, not only how it feels.</strong> Using Kahneman's experiencing and remembering selves, we aimed for control in the moment and an "aha" ending with jeans that fit.</p>
+                    <p><strong>1. Design for how shopping is remembered, not only how it feels.</strong> Using Kahneman's experiencing and remembering selves, we aimed for control in the moment and an "aha" ending with jeans that fit.</p>
                 </div>
                 <div class="decision">
-                    <p><strong>Replace guesswork with a "denim identity" quiz.</strong> Inspired by Spotify Wrapped and Buzzfeed Quizzes, it gives personalized, cross-brand recommendations that also work in store.</p>
+                    <p><strong>2. Replace guesswork with a "denim identity" quiz.</strong> Inspired by Spotify Wrapped and BuzzFeed quizzes, it gives personalized, cross-brand recommendations that also work in store.</p>
                 </div>
                 <div class="decision">
-                    <p><strong>Make the community personal, not public.</strong> Solo shopping is isolating, so we built a Pinterest-style board and a friends page with no public posts or follower counts, just honest feedback from people you know.</p>
+                    <p><strong>3. Make the community personal, not public.</strong> Solo shopping is isolating, so we built a Pinterest-style board and a friends page with no public posts or follower counts, just honest feedback from people you know.</p>
                 </div>
             </article>
+            <!-- ADD: screenshot of the quiz or denim identity reveal (decision 2) in the gallery below -->
+            <div class="detail-gallery" style="margin-top:1rem">
+                <figure class="detail-gallery__item"><img src="img/fitlist-slide13.png" alt="Future-state journey map with a much more positive emotional line ending in a purchase."><figcaption>Decision 1 in the future journey: guided in store, ending in jeans that fit.</figcaption></figure>
+                <figure class="detail-gallery__item"><img src="img/fitlist-slide24.png" alt="Final community page in a Pinterest style, and the friends page."><figcaption>Decision 3 in the final design: community board and friends page.</figcaption></figure>
+            </div>
         </section>
 
         <section class="detail-section">
-            <h2 class="detail-section__title">The final design</h2>
+            <h2 class="detail-section__title">Process: from first prototype to final design</h2>
+            <p class="detail-section__intro">The first versions, made in Figma Make and Claude, had an onboarding quiz, denim identity reveal, recommendations feed, virtual closet, and community page. Then we made the community the focus: a Pinterest-style board, a friends page, direct fit sharing, and a whole-look board.</p>
             <div class="detail-gallery">
-                <figure class="detail-gallery__item"><img src="img/fitlist-slide24.png" alt="Final community page in a Pinterest style, and the friends page."><figcaption>Community board and friends page</figcaption></figure>
-                <figure class="detail-gallery__item"><img src="img/fitlist-slide25.png" alt="Curated recommendations feed and private inspiration board showing full outfits."><figcaption>Recommendations and a whole-look inspiration board</figcaption></figure>
+                <figure class="detail-gallery__item"><img src="img/fitlist-slide23.png" alt="Initial prototype features and community screen."><figcaption>Version 1: five features, community as one tab</figcaption></figure>
+                <figure class="detail-gallery__item"><img src="img/fitlist-prototypes.png" alt="Early prototype screens."><figcaption>Early prototype screens</figcaption></figure>
+                <figure class="detail-gallery__item"><img src="img/fitlist-slide25.png" alt="Curated recommendations feed and private inspiration board showing full outfits."><figcaption>Final: recommendations and whole-look inspiration board</figcaption></figure>
+            </div>
+            <!-- ADD if you have them: sketches and wireframes, ideally before/after pairs showing what changed -->
+        </section>
+
+        <section class="detail-section">
+            <h2 class="detail-section__title">Where FitList fits in the market</h2>
+            <p class="detail-section__intro">True Fit and fitAnalytics live on partner retailer sites and are built for retailers. FitList is a standalone shopper app that works online and in store, with a community.</p>
+            <div class="detail-gallery">
+                <figure class="detail-gallery__item"><img src="img/fitlist-slide22.png" alt="Competitive analysis table comparing True Fit, fitAnalytics, and FitList."><figcaption>Competitive analysis</figcaption></figure>
+                <figure class="detail-gallery__item"><img src="img/fitlist-slide12.png" alt="Solution storyboard: denim identity, in-store guidance, try-on, and leaving a review."><figcaption>Solution storyboard</figcaption></figure>
             </div>
         </section>
 
@@ -97,25 +132,17 @@
                 <article class="detail-card">
                     <h2>What testing showed</h2>
                     <p>The quiz and denim identity, the Pinterest-style board, the friends page, and shopping the whole look all resonated.</p>
-                    <p class="method-note">5 User Tests, 20 Minutes Each</p>
+                    <p class="method-note">5 user tests, 20 minutes each</p>
                 </article>
                 <article class="detail-card">
                     <h2>What's still unsolved</h2>
-                    <p>Users are unlikely to retake the quiz, so recommendations could go stale as fit changes. Future work to address this would involve implementing a feature to update recommendations based on user activity on community pages. Testers also asked for an outfit-of-the-day leaderboard.</p>
+                    <p>Users are unlikely to retake the quiz, so recommendations could go stale as fit changes. Next, I'd update recommendations based on activity on community pages. Testers also asked for an outfit-of-the-day leaderboard.</p>
                 </article>
             </div>
         </section>
 
+
         <section class="detail-section">
-            <h2 class="detail-section__title">Deep dive</h2>
-
-            <details class="deep-dive">
-                <summary>Research: storyboard and persona</summary>
-                <p>Our persona, Tiffany, is 29 and loves trying new styles, but a "size 4" in one store fits nothing like a "size 4" in another, and returns waste her time.</p>
-                <figure><img src="img/fitlist-slide6.jpg" alt="Problem storyboard: jeans that don't fit, a return, and giving up at a second store."></figure>
-                <figure><img src="img/fitlist-slide11.png" alt="Persona card for Tiffany with goals and frustrations."></figure>
-            </details>
-
             <details class="deep-dive">
                 <summary>Psychology framework</summary>
                 <ul>
@@ -126,21 +153,6 @@
                     <li><strong>Relatedness:</strong> moving from an isolated struggle to seeing yourself in others.</li>
                 </ul>
             </details>
-
-            <details class="deep-dive">
-                <summary>Competitive analysis and solution storyboard</summary>
-                <p>True Fit and fitAnalytics live on partner retailer sites and are built for retailers. FitList is a standalone shopper app that works online and in store, with a community.</p>
-                <figure><img src="img/fitlist-slide22.png" alt="Competitive analysis table comparing True Fit, fitAnalytics, and FitList."></figure>
-                <figure><img src="img/fitlist-slide12.png" alt="Solution storyboard: denim identity, in-store guidance, try-on, and leaving a review."></figure>
-            </details>
-
-            <details class="deep-dive">
-                <summary>First prototype</summary>
-                <p>The first versions, made in Figma Make and Claude, had an onboarding quiz, denim identity reveal, recommendations feed, virtual closet, and community page. We then made the community the focus and added the friends page, direct fit sharing, and the whole-look board.</p>
-                <figure><img src="img/fitlist-slide23.png" alt="Initial prototype features and community screen."></figure>
-                <figure><img src="img/fitlist-prototypes.png" alt="Initial prototype features."></figure>
-            </details>
-
             <details class="deep-dive">
                 <summary>Sources</summary>
                 <p>Harper (2023), The Guardian; Hassenzahl (2010), <em>Experience Design</em>; Huta (2017), <em>Journal of Constructivist Psychology</em>; Ruspoli (2010), <em>Being in the World</em>.</p>
@@ -148,9 +160,10 @@
         </section>
 
         <nav class="next-project" aria-label="Project navigation">
-            <a class="btn btn-secondary" href="./#projects">Back to work</a>
+            <a class="btn btn-secondary" href="index.html#projects">Back to work</a>
             <a class="btn btn-primary" href="case-study-ai-lies.html">Next project: When AI Lies With Confidence</a>
         </nav>
     </main>
+    <script src="lightbox.js" defer></script>
 </body>
 </html>
