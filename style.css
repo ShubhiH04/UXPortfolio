@@ -1066,3 +1066,134 @@ main {
     text-decoration: underline;
     color: var(--primary-text);
 }
+
+/* Large-type callouts that stop a skimming eye */
+.big-statement {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 3.6vw, 2.7rem);
+    line-height: 1.2;
+    color: var(--text-primary);
+    padding: 1.6rem 1.8rem;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(243, 194, 242, 0.35), rgba(158, 198, 249, 0.3));
+    border: 1px solid var(--border);
+    margin: 1rem 0;
+}
+
+.case-contact {
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.case-contact a {
+    color: var(--primary-text);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Daseigner headline: highlighter effect and hand-drawn arrow */
+.hero h1 .h1-line {
+    display: block;
+}
+
+.hero h1 .h1-sub {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.55em;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--text-secondary);
+}
+
+mark.daseigner {
+    color: inherit;
+    padding: 0 0.15em;
+    background-image: linear-gradient(100deg, rgba(248, 181, 212, 0.95), rgba(243, 194, 242, 0.95));
+    background-repeat: no-repeat;
+    background-position: 0 88%;
+    background-size: 0% 55%;
+    border-radius: 4px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    animation: highlight-sweep 0.9s 0.4s ease-out forwards;
+}
+
+@keyframes highlight-sweep {
+    to {
+        background-size: 100% 100%;
+    }
+}
+
+.dase-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin: 0.2rem 0 0.3rem 3.2rem;
+    color: var(--primary-text);
+}
+
+.dase-note span {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.05rem;
+    margin-top: 0.2rem;
+    transform: rotate(-3deg);
+}
+
+.hero .description.dase-explain {
+    border-left: 4px solid var(--accent-color);
+    padding-left: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    mark.daseigner {
+        animation: none;
+        background-size: 100% 55%;
+    }
+}
+
+@media (max-width: 640px) {
+    .dase-note {
+        display: none;
+    }
+}
+
+/* keep only the pink sweep */
+mark.daseigner {
+    background-color: transparent;
+}
+
+/* Arrow grows out of the word and curves down toward the explanation */
+.dase-anchor {
+    position: relative;
+    display: inline-block;
+}
+
+.dase-arrow {
+    position: absolute;
+    left: calc(100% + 0.15em);
+    top: 55%;
+    width: 1.9em;
+    height: 2.9em;
+    overflow: visible;
+    color: var(--primary-text);
+    pointer-events: none;
+}
+
+.hero h1 .h1-sub {
+    max-width: 30ch;
+}
+
+.dase-note {
+    margin: 0 0 0.4rem 0;
+}
+
+@media (max-width: 640px) {
+    .dase-arrow {
+        display: none;
+    }
+
+    .hero h1 .h1-sub {
+        max-width: none;
+    }
+}
